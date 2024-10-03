@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="myurdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.31366 0.011066 -0.013111"
+        rpy="0 0 0" />
+      <mass
+        value="0.84428" />
+      <inertia
+        ixx="0.0058714"
+        ixy="-5.7498E-08"
+        ixz="4.9161E-11"
+        iyy="0.0052043"
+        iyz="2.1071E-06"
+        izz="0.011002" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_right_steering">
+    <inertial>
+      <origin
+        xyz="0.011888 0.0463 -0.0035853"
+        rpy="0 0 0" />
+      <mass
+        value="0.16386" />
+      <inertia
+        ixx="0.00015825"
+        ixy="-9.4991E-07"
+        ixz="-4.912E-07"
+        iyy="0.00025911"
+        iyz="-3.0126E-06"
+        izz="0.00013071" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/front_right_steering.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/front_right_steering.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_steering_joint"
+    type="continuous">
+    <origin
+      xyz="0.083907 -0.21014 -0.02519"
+      rpy="1.5708 0 -2.343" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_steering" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="-0.0018494 0.018245 -0.072424"
+        rpy="0 0 0" />
+      <mass
+        value="0.22141" />
+      <inertia
+        ixx="0.00015209"
+        ixy="-3.0811E-07"
+        ixz="1.153E-07"
+        iyy="0.00015182"
+        iyz="-6.6199E-08"
+        izz="0.00024848" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.089441 0.017567 -0.0053214"
+      rpy="1.5708 -1.1791 1.5708" />
+    <parent
+      link="front_right_steering" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
