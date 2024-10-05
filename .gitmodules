@@ -1,0 +1,3 @@
+[submodule "rosws/src/myurdf_fix"]
+	path = rosws/src/myurdf_fix
+	url = https://github.com/Elaina-rascal/myurdf_fix.git
