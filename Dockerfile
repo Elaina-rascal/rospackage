@@ -28,7 +28,7 @@ WORKDIR /home/$USERNAME
 
 # 删除 sudo 权限
 USER root
-RUN deluser $USERNAME sudo && sed -i "/$USERNAME ALL=(ALL) NOPASSWD:ALL/d" /etc/sudoers \
+RUN sed -i "/$USERNAME ALL=(ALL) NOPASSWD:ALL/d" /etc/sudoers \
 # && echo 'export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH' >> /home/${USERNAME}/.bashrc \
 && echo 'source ~/Ros/rosws/devel/setup.bash' >> /home/${USERNAME}/.bashrc
 USER $USERNAME

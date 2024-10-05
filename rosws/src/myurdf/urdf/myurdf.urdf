@@ -8,17 +8,17 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="0.31366 0.011066 -0.013111"
+        xyz="-0.000235295910548661 0.0100786759908472 0.0141449531410163"
         rpy="0 0 0" />
       <mass
-        value="0.84428" />
+        value="1.95577438158697" />
       <inertia
-        ixx="0.0058714"
-        ixy="-5.7498E-08"
-        ixz="4.9161E-11"
-        iyy="0.0052043"
-        iyz="2.1071E-06"
-        izz="0.011002" />
+        ixx="0.0154639225717831"
+        ixy="4.35705448189703E-05"
+        ixz="6.59986477747433E-11"
+        iyy="0.0133714720845818"
+        iyz="2.29371263918084E-06"
+        izz="0.0286717017671888" />
     </inertial>
     <visual>
       <origin
@@ -31,7 +31,7 @@
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
     </visual>
     <collision>
@@ -48,17 +48,17 @@
     name="front_right_steering">
     <inertial>
       <origin
-        xyz="0.011888 0.0463 -0.0035853"
+        xyz="0.00801776215731023 -0.0117428465609573 0.000580924898174129"
         rpy="0 0 0" />
       <mass
-        value="0.16386" />
+        value="0.610591222095894" />
       <inertia
-        ixx="0.00015825"
-        ixy="-9.4991E-07"
-        ixz="-4.912E-07"
-        iyy="0.00025911"
-        iyz="-3.0126E-06"
-        izz="0.00013071" />
+        ixx="0.000582629289495863"
+        ixy="-4.99430083725313E-07"
+        ixz="1.10358360622853E-05"
+        iyy="0.000991102871531918"
+        iyz="-8.35472068741381E-06"
+        izz="0.000533386188927072" />
     </inertial>
     <visual>
       <origin
@@ -71,7 +71,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
       </material>
     </visual>
     <collision>
@@ -88,8 +88,8 @@
     name="front_right_steering_joint"
     type="continuous">
     <origin
-      xyz="0.083907 -0.21014 -0.02519"
-      rpy="1.5708 0 -2.343" />
+      xyz="-0.23631 -0.21508 0.033825"
+      rpy="1.5708 0 -2.1067" />
     <parent
       link="base_link" />
     <child
@@ -101,17 +101,17 @@
     name="front_right_wheel">
     <inertial>
       <origin
-        xyz="-0.0018494 0.018245 -0.072424"
+        xyz="-1.36224666647776E-05 -0.00233860532400536 -1.278132998489E-05"
         rpy="0 0 0" />
       <mass
-        value="0.22141" />
+        value="0.265552463932757" />
       <inertia
-        ixx="0.00015209"
-        ixy="-3.0811E-07"
-        ixz="1.153E-07"
-        iyy="0.00015182"
-        iyz="-6.6199E-08"
-        izz="0.00024848" />
+        ixx="0.000257423769631664"
+        ixy="4.21536341431835E-07"
+        ixz="6.90830608456453E-07"
+        iyy="0.00042589263687006"
+        iyz="3.86659897806625E-07"
+        izz="0.000257304300299443" />
     </inertial>
     <visual>
       <origin
@@ -124,7 +124,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
       </material>
     </visual>
     <collision>
@@ -141,13 +141,331 @@
     name="front_right_wheel_joint"
     type="continuous">
     <origin
-      xyz="0.089441 0.017567 -0.0053214"
-      rpy="1.5708 -1.1791 1.5708" />
+      xyz="-0.0087483 -0.041 -0.0021067"
+      rpy="-2.9038 -0.11023 -1.5975" />
     <parent
       link="front_right_steering" />
     <child
       link="front_right_wheel" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="front_left_steering">
+    <inertial>
+      <origin
+        xyz="0.00801776213800653 -0.0117428466027283 0.000580924927511495"
+        rpy="0 0 0" />
+      <mass
+        value="0.61059122245919" />
+      <inertia
+        ixx="0.000582629289564996"
+        ixy="-4.99429789248549E-07"
+        ixz="1.10358359044783E-05"
+        iyy="0.000991102871773846"
+        iyz="-8.35472062011616E-06"
+        izz="0.000533386189079245" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/front_left_steering.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/front_left_steering.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_steering_joint"
+    type="continuous">
+    <origin
+      xyz="0.24069 -0.21508 0.030825"
+      rpy="1.5708 0 -1.9247" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_steering" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="2.10718169246782E-07 -0.0153386053240048 0.00058132141354178"
+        rpy="0 0 0" />
+      <mass
+        value="0.265552463932756" />
+      <inertia
+        ixx="0.000256670626601084"
+        ixy="-1.35525271560688E-19"
+        ixz="5.42101086242752E-20"
+        iyy="0.000425892636870059"
+        iyz="5.72012905203992E-07"
+        izz="0.000258057443330022" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/front_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.02147 -0.040515 -0.0048072"
+      rpy="-2.753 -0.90465 -1.8822" />
+    <parent
+      link="front_left_steering" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="back_right_steering">
+    <inertial>
+      <origin
+        xyz="0.0080177621393494 0.00106745521915842 0.000580924928540297"
+        rpy="0 0 0" />
+      <mass
+        value="0.610591222475197" />
+      <inertia
+        ixx="0.000582629289555916"
+        ixy="-4.99429790570577E-07"
+        ixz="1.10358359048908E-05"
+        iyy="0.000991102871772887"
+        iyz="-8.35472062256207E-06"
+        izz="0.000533386189070703" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/back_right_steering.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/back_right_steering.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_steering_joint"
+    type="continuous">
+    <origin
+      xyz="-0.23631 0.21808 0.018015"
+      rpy="1.5708 0 1.2169" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_right_steering" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="back_right_wheel">
+    <inertial>
+      <origin
+        xyz="0.0279950481261846 0.00665974674197906 0.00317680407528294"
+        rpy="0 0 0" />
+      <mass
+        value="0.265552463932757" />
+      <inertia
+        ixx="0.000257423769631664"
+        ixy="4.21536341431734E-07"
+        ixz="6.90830608456447E-07"
+        iyy="0.00042589263687006"
+        iyz="3.86659897806774E-07"
+        izz="0.000257304300299443" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.041 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/back_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/back_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.041 0"
+      rpy="-2.9038 0 -1.5975" />
+    <parent
+      link="back_right_steering" />
+    <child
+      link="back_right_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="back_left_steering">
+    <inertial>
+      <origin
+        xyz="0.00801776215485656 -0.0117428465593347 0.000580924896310786"
+        rpy="0 0 0" />
+      <mass
+        value="0.610591222034383" />
+      <inertia
+        ixx="0.000582629289495632"
+        ixy="-4.99430083911265E-07"
+        ixz="1.10358360622292E-05"
+        iyy="0.00099110287153188"
+        iyz="-8.35472068738675E-06"
+        izz="0.000533386188926728" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/back_left_steering.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/back_left_steering.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_steering_joint"
+    type="continuous">
+    <origin
+      xyz="0.23569 0.21808 0.033825"
+      rpy="1.5708 0 1.0349" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_left_steering" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="back_left_wheel">
+    <inertial>
+      <origin
+        xyz="-1.36224666648019E-05 -0.00233860532400521 -1.27813299848067E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.265552463932757" />
+      <inertia
+        ixx="0.000257423769631664"
+        ixy="4.21536341431771E-07"
+        ixz="6.90830608456553E-07"
+        iyy="0.00042589263687006"
+        iyz="3.86659897806232E-07"
+        izz="0.000257304300299443" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/back_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myurdf/meshes/back_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0087483 -0.041 -0.0021067"
+      rpy="-2.9038 -0.11023 -1.5975" />
+    <parent
+      link="back_left_steering" />
+    <child
+      link="back_left_wheel" />
+    <axis
+      xyz="0 1 0" />
   </joint>
 </robot>
